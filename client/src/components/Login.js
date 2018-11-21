@@ -22,23 +22,34 @@ class Login extends React.Component {
       this.props.updateLogin('user', this.state.email);
     }
   };
-  }
 
   render() {
     return (
-    <div>
+      <div>
         <div>{this.state.error}</div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-        </div>
-        <button>Login</button>
-      </form>
-    </div>);
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    );
   }
 }
 
