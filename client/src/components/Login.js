@@ -4,7 +4,8 @@ class Login extends React.Component {
   state = {
     email: '',
     password: '',
-  }
+    error: '',
+  };
 
   handleChange = event => {
     const { name, value } = event.target;
@@ -14,7 +15,7 @@ class Login extends React.Component {
   render() {
     return (
     <div>
-      <form>
+        <div>{this.state.error}</div>
         <div>
           <label htmlFor="email">Email:</label>
           <input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
