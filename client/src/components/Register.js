@@ -8,6 +8,11 @@ class Register extends React.Component {
     error: '',
   }
 
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
   render() {
     return (
       <div>
