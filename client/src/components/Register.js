@@ -13,6 +13,18 @@ class Register extends React.Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    if (!this.state.email || !this.state.password || !this.state.confirmPassword) {
+      this.setState({
+        error: 'Please fill out all fields!',
+      });
+    } else if (this.state.password !== this.state.confirmPassword) {
+      this.setState({ error: 'Passwords do not match' });
+    }
+    // TODO: add axios call here
+  };
+
   render() {
     return (
       <div>
