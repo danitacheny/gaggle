@@ -20,7 +20,7 @@ class Login extends React.Component {
         error: 'Please fill out both email and password fields!',
       });
     } else {
-      this.props.updateLogin('user', this.state.email);
+      this.props.updateAuth(true, this.state.email);
     }
   };
 
