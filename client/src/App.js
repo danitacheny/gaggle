@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import UserView from './views/UserView';
+import Auth from './HOC/Auth';
 
 class App extends Component {
-  state = {
-    user: '',
-  }
-
-  updateState = (key, value) => {
-    this.setState({ [key]: value });
-  }
-
   render() {
     return (
       <div>
-        <UserView user={this.state.user}/>
+        {this.props.user} is logged in.
       </div>
     );
   }
 }
 
-export default App;
+export default Auth(App);
