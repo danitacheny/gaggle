@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class Register extends React.Component {
   state = {
@@ -59,6 +60,8 @@ class Register extends React.Component {
           </div>
           <button type="submit">Register</button>
         </form>
+        Already have an account?
+          <Link to='login'><button>Login</button></Link>
       </div>
     )
   }
