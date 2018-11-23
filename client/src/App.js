@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Login from './components/Login';
+import UserView from './views/UserView';
 
 class App extends Component {
   state = {
@@ -15,8 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Login updateLogin={this.updateState} />
-        {this.state.user}
+        <UserView user={this.state.user}/>
       </div>
     );
   }
