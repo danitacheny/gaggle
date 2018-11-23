@@ -8,7 +8,7 @@ class UserView extends Component {
   render() {
     return (
       <div>
-        <Route path='/login' component={Login} />
+        <Route path='/login' render={(props) => <Login {...props} updateAuth={this.props.updateAuth} />} />
         <Route path='/register' component={Register} />
       </div>
     );
