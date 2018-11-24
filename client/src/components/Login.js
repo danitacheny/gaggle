@@ -34,10 +34,10 @@ class Login extends React.Component {
         <header>
           <h1>Login:</h1>
         </header>
-        {this.state.error && (
-          <div className={style.error}>{this.state.error}</div>
-        )}
         <form onSubmit={this.handleSubmit} className={style.form}>
+          {this.state.error && (
+            <div className={style.error}>{this.state.error}</div>
+          )}
           <div className={style.formGroup}>
             <label htmlFor="email">Email:</label>
             <input
