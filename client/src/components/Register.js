@@ -5,6 +5,7 @@ import style from './styles/Form.module.css';
 
 class Register extends React.Component {
   state = {
+    name: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -45,6 +46,16 @@ class Register extends React.Component {
           {this.state.error && (
             <div className={style.error}>{this.state.error}</div>
           )}
+          <div className={style.formGroup}>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              className={style.input}
+            />
+          </div>
           <div className={style.formGroup}>
             <label htmlFor="email">Email:</label>
             <input
