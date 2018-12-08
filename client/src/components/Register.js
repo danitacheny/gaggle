@@ -92,7 +92,7 @@ class Register extends React.Component {
               Register
             </button>
             <Link to="login">
-              <button className={style.button}>Login</button>
+              <button className={style.button}>Go to Login</button>
             </Link>
           </div>
         </form>
