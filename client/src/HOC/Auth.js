@@ -11,7 +11,15 @@ const Auth = WrappedComponent => {
       user: '',
     };
 
+    componentDidMount = () => {
+      const user = localStorage.getItem('user');
+      let authed = user !== null;
+      this.setState({ authed, user });
+    }
+
+
     login = (authed, user) => {
+      localStorage.setItem('user', user);
       this.setState({ authed, user });
     };
 
